@@ -7,7 +7,6 @@ function AstronautDisplay({id}) {
         async function getAstronaut(){
             let response = await fetch (`${process.env.REACT_APP_ASTRONAUT_API_URL}/${id}`);
             let data = await response.json();
-            console.log(data);
             setAstronaut(data);
         }
         getAstronaut();
